@@ -7,10 +7,7 @@ public class EmployeeWageBuilder {
 
 		Random r = new Random();
 		int result = r.nextInt(3);
-		present(result);
-	}
-
-	static void present(int result) {
+	
 		int wagePerHour = 20, fullHour = 8, dailyWage = 0, monthyDays = 20, monthlyWage = 0;
 
 		switch (result) {
