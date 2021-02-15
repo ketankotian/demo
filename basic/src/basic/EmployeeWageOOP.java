@@ -19,10 +19,15 @@ public class EmployeeWageOOP {
 
 	public static void main(String[] args) {
 		EmployeeWageOOP dmart = new EmployeeWageOOP("DMart", 20, 2, 10);
+		dmart.calclulateWage();
+		EmployeeWageOOP relaince = new EmployeeWageOOP("Relaince", 15, 3, 20);
+		relaince.calclulateWage();
+	}
 
+	public void calclulateWage() {
 		int empHrs = 0, empWage = 0, totalWage = 0, totalWorkingDays = 0, totalEmpHrs = 0;
 
-		while (totalEmpHrs <= dmart.maxHoursPerMonth && totalWorkingDays < dmart.numberOfWorkingDays) {
+		while (totalEmpHrs <= maxHoursPerMonth && totalWorkingDays < numberOfWorkingDays) {
 
 			int empCheck = (int) Math.floor(Math.random() * 10) % 3;
 
@@ -42,9 +47,8 @@ public class EmployeeWageOOP {
 			totalWorkingDays++;
 			totalEmpHrs += empHrs;
 			System.out.println("Days : " + totalWorkingDays + "  Emp hrs: " + empHrs);
-			totalWage = totalEmpHrs * dmart.employeeRatePerHour;
-			System.out.println("Total Emp Wage for company - " + dmart.company + " : " + totalWage);
+			totalWage = totalEmpHrs * employeeRatePerHour;
+			System.out.println("Total Emp Wage for company - " + company + " : " + totalWage);
 		}
 	}
-
 }
